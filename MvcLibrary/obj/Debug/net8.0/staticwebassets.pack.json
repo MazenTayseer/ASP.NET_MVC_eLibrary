@@ -1,0 +1,377 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Mazii\\Desktop\\Semester 7\\IP\\Learn asp.net\\MvcLibrary\\MvcLibrary\\wwwroot\\EmailTemplates\\EmailOrderTemplateNew.html",
+      "PackagePath": "staticwebassets\\EmailTemplates\\EmailOrderTemplateNew.html"
+    },
+    {
+      "Id": "C:\\Users\\Mazii\\Desktop\\Semester 7\\IP\\Learn asp.net\\MvcLibrary\\MvcLibrary\\wwwroot\\EmailTemplates\\EmailOrderTemplateOld.html",
+      "PackagePath": "staticwebassets\\EmailTemplates\\EmailOrderTemplateOld.html"
+    },
+    {
+      "Id": "C:\\Users\\Mazii\\Desktop\\Semester 7\\IP\\Learn asp.net\\MvcLibrary\\MvcLibrary\\wwwroot\\css\\Promo.css",
+      "PackagePath": "staticwebassets\\css\\Promo.css"
+    },
+    {
+      "Id": "C:\\Users\\Mazii\\Desktop\\Semester 7\\IP\\Learn asp.net\\MvcLibrary\\MvcLibrary\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\Mazii\\Desktop\\Semester 7\\IP\\Learn asp.net\\MvcLibrary\\MvcLibrary\\wwwroot\\imgs\\books\\021ff9db-4bb5-4f59-a98e-afaa37983f1a_48 Laws of Power.png",
+      "PackagePath": "staticwebassets\\imgs\\books\\021ff9db-4bb5-4f59-a98e-afaa37983f1a_48 Laws of Power.png"
+    },
+    {
+      "Id": "C:\\Users\\Mazii\\Desktop\\Semester 7\\IP\\Learn asp.net\\MvcLibrary\\MvcLibrary\\wwwroot\\imgs\\books\\09daa918-964b-4d39-9011-0a8ec11d831d_Atomic Habits.png",
+      "PackagePath": "staticwebassets\\imgs\\books\\09daa918-964b-4d39-9011-0a8ec11d831d_Atomic Habits.png"
+    },
+    {
+      "Id": "C:\\Users\\Mazii\\Desktop\\Semester 7\\IP\\Learn asp.net\\MvcLibrary\\MvcLibrary\\wwwroot\\imgs\\books\\109ce197-2401-45ef-800e-624b3e93afe0_To Kill A Mockingbird.jpg",
+      "PackagePath": "staticwebassets\\imgs\\books\\109ce197-2401-45ef-800e-624b3e93afe0_To Kill A Mockingbird.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Mazii\\Desktop\\Semester 7\\IP\\Learn asp.net\\MvcLibrary\\MvcLibrary\\wwwroot\\imgs\\books\\6164e908-2a51-4bf5-b8b4-a51c4afc2326_Meditations.jpg",
+      "PackagePath": "staticwebassets\\imgs\\books\\6164e908-2a51-4bf5-b8b4-a51c4afc2326_Meditations.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Mazii\\Desktop\\Semester 7\\IP\\Learn asp.net\\MvcLibrary\\MvcLibrary\\wwwroot\\imgs\\books\\653b9a40-07d1-4b0a-bb30-9c55064a9eba_The Catcher in the Rye.jpg",
+      "PackagePath": "staticwebassets\\imgs\\books\\653b9a40-07d1-4b0a-bb30-9c55064a9eba_The Catcher in the Rye.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Mazii\\Desktop\\Semester 7\\IP\\Learn asp.net\\MvcLibrary\\MvcLibrary\\wwwroot\\imgs\\books\\74cfa70d-d448-457b-af3c-4c5da08e3fa2_Harry Potter and the Sorcerer's Stone.jpg",
+      "PackagePath": "staticwebassets\\imgs\\books\\74cfa70d-d448-457b-af3c-4c5da08e3fa2_Harry Potter and the Sorcerer's Stone.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Mazii\\Desktop\\Semester 7\\IP\\Learn asp.net\\MvcLibrary\\MvcLibrary\\wwwroot\\imgs\\books\\7f049f47-784c-4e43-bc2e-8b9935e4a443_The Great Gatsby.webp",
+      "PackagePath": "staticwebassets\\imgs\\books\\7f049f47-784c-4e43-bc2e-8b9935e4a443_The Great Gatsby.webp"
+    },
+    {
+      "Id": "C:\\Users\\Mazii\\Desktop\\Semester 7\\IP\\Learn asp.net\\MvcLibrary\\MvcLibrary\\wwwroot\\imgs\\books\\a1bf66af-e243-4fb8-b1fb-7b77d4f8015d_1984.jpg",
+      "PackagePath": "staticwebassets\\imgs\\books\\a1bf66af-e243-4fb8-b1fb-7b77d4f8015d_1984.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Mazii\\Desktop\\Semester 7\\IP\\Learn asp.net\\MvcLibrary\\MvcLibrary\\wwwroot\\imgs\\books\\a49f4962-9454-414b-9ca3-a07f77371a47_One Hundred Years of Solitude.jpg",
+      "PackagePath": "staticwebassets\\imgs\\books\\a49f4962-9454-414b-9ca3-a07f77371a47_One Hundred Years of Solitude.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Mazii\\Desktop\\Semester 7\\IP\\Learn asp.net\\MvcLibrary\\MvcLibrary\\wwwroot\\imgs\\books\\a731d448-81ff-4446-9443-6869b35f5a1c_Steve Jobs.jpg",
+      "PackagePath": "staticwebassets\\imgs\\books\\a731d448-81ff-4446-9443-6869b35f5a1c_Steve Jobs.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Mazii\\Desktop\\Semester 7\\IP\\Learn asp.net\\MvcLibrary\\MvcLibrary\\wwwroot\\imgs\\books\\de8b3044-0372-49ab-9ddb-44981516b165_48 Laws of Powejjjkjkikklklghg.jpg",
+      "PackagePath": "staticwebassets\\imgs\\books\\de8b3044-0372-49ab-9ddb-44981516b165_48 Laws of Powejjjkjkikklklghg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Mazii\\Desktop\\Semester 7\\IP\\Learn asp.net\\MvcLibrary\\MvcLibrary\\wwwroot\\imgs\\index 1.jpg",
+      "PackagePath": "staticwebassets\\imgs\\index 1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Mazii\\Desktop\\Semester 7\\IP\\Learn asp.net\\MvcLibrary\\MvcLibrary\\wwwroot\\imgs\\index 2.jpg",
+      "PackagePath": "staticwebassets\\imgs\\index 2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Mazii\\Desktop\\Semester 7\\IP\\Learn asp.net\\MvcLibrary\\MvcLibrary\\wwwroot\\imgs\\index books\\48 Laws of Power.png",
+      "PackagePath": "staticwebassets\\imgs\\index books\\48 Laws of Power.png"
+    },
+    {
+      "Id": "C:\\Users\\Mazii\\Desktop\\Semester 7\\IP\\Learn asp.net\\MvcLibrary\\MvcLibrary\\wwwroot\\imgs\\index books\\Atomic Habits.png",
+      "PackagePath": "staticwebassets\\imgs\\index books\\Atomic Habits.png"
+    },
+    {
+      "Id": "C:\\Users\\Mazii\\Desktop\\Semester 7\\IP\\Learn asp.net\\MvcLibrary\\MvcLibrary\\wwwroot\\imgs\\index books\\To Kill A Mockingbird.jpg",
+      "PackagePath": "staticwebassets\\imgs\\index books\\To Kill A Mockingbird.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Mazii\\Desktop\\Semester 7\\IP\\Learn asp.net\\MvcLibrary\\MvcLibrary\\wwwroot\\imgs\\login.svg",
+      "PackagePath": "staticwebassets\\imgs\\login.svg"
+    },
+    {
+      "Id": "C:\\Users\\Mazii\\Desktop\\Semester 7\\IP\\Learn asp.net\\MvcLibrary\\MvcLibrary\\wwwroot\\imgs\\main.jpg",
+      "PackagePath": "staticwebassets\\imgs\\main.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Mazii\\Desktop\\Semester 7\\IP\\Learn asp.net\\MvcLibrary\\MvcLibrary\\wwwroot\\imgs\\people\\Adham.jpg",
+      "PackagePath": "staticwebassets\\imgs\\people\\Adham.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Mazii\\Desktop\\Semester 7\\IP\\Learn asp.net\\MvcLibrary\\MvcLibrary\\wwwroot\\imgs\\people\\Kareem Shoaib.jpg",
+      "PackagePath": "staticwebassets\\imgs\\people\\Kareem Shoaib.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Mazii\\Desktop\\Semester 7\\IP\\Learn asp.net\\MvcLibrary\\MvcLibrary\\wwwroot\\imgs\\people\\Ma8raby.jpg",
+      "PackagePath": "staticwebassets\\imgs\\people\\Ma8raby.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Mazii\\Desktop\\Semester 7\\IP\\Learn asp.net\\MvcLibrary\\MvcLibrary\\wwwroot\\imgs\\people\\Mazen Tayseer.jpeg",
+      "PackagePath": "staticwebassets\\imgs\\people\\Mazen Tayseer.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Mazii\\Desktop\\Semester 7\\IP\\Learn asp.net\\MvcLibrary\\MvcLibrary\\wwwroot\\imgs\\people\\Mooo.jpg",
+      "PackagePath": "staticwebassets\\imgs\\people\\Mooo.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Mazii\\Desktop\\Semester 7\\IP\\Learn asp.net\\MvcLibrary\\MvcLibrary\\wwwroot\\imgs\\people\\Nadin.jpg",
+      "PackagePath": "staticwebassets\\imgs\\people\\Nadin.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Mazii\\Desktop\\Semester 7\\IP\\Learn asp.net\\MvcLibrary\\MvcLibrary\\wwwroot\\imgs\\people\\Ramzi.jpg",
+      "PackagePath": "staticwebassets\\imgs\\people\\Ramzi.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Mazii\\Desktop\\Semester 7\\IP\\Learn asp.net\\MvcLibrary\\MvcLibrary\\wwwroot\\imgs\\people\\Tarek.jpg",
+      "PackagePath": "staticwebassets\\imgs\\people\\Tarek.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Mazii\\Desktop\\Semester 7\\IP\\Learn asp.net\\MvcLibrary\\MvcLibrary\\wwwroot\\imgs\\promo.jpg",
+      "PackagePath": "staticwebassets\\imgs\\promo.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Mazii\\Desktop\\Semester 7\\IP\\Learn asp.net\\MvcLibrary\\MvcLibrary\\wwwroot\\js\\library.js",
+      "PackagePath": "staticwebassets\\js\\library.js"
+    },
+    {
+      "Id": "C:\\Users\\Mazii\\Desktop\\Semester 7\\IP\\Learn asp.net\\MvcLibrary\\MvcLibrary\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\Users\\Mazii\\Desktop\\Semester 7\\IP\\Learn asp.net\\MvcLibrary\\MvcLibrary\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\Mazii\\Desktop\\Semester 7\\IP\\Learn asp.net\\MvcLibrary\\MvcLibrary\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Mazii\\Desktop\\Semester 7\\IP\\Learn asp.net\\MvcLibrary\\MvcLibrary\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Mazii\\Desktop\\Semester 7\\IP\\Learn asp.net\\MvcLibrary\\MvcLibrary\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Mazii\\Desktop\\Semester 7\\IP\\Learn asp.net\\MvcLibrary\\MvcLibrary\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\Mazii\\Desktop\\Semester 7\\IP\\Learn asp.net\\MvcLibrary\\MvcLibrary\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Mazii\\Desktop\\Semester 7\\IP\\Learn asp.net\\MvcLibrary\\MvcLibrary\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Mazii\\Desktop\\Semester 7\\IP\\Learn asp.net\\MvcLibrary\\MvcLibrary\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Mazii\\Desktop\\Semester 7\\IP\\Learn asp.net\\MvcLibrary\\MvcLibrary\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\Mazii\\Desktop\\Semester 7\\IP\\Learn asp.net\\MvcLibrary\\MvcLibrary\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Mazii\\Desktop\\Semester 7\\IP\\Learn asp.net\\MvcLibrary\\MvcLibrary\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Mazii\\Desktop\\Semester 7\\IP\\Learn asp.net\\MvcLibrary\\MvcLibrary\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Mazii\\Desktop\\Semester 7\\IP\\Learn asp.net\\MvcLibrary\\MvcLibrary\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\Mazii\\Desktop\\Semester 7\\IP\\Learn asp.net\\MvcLibrary\\MvcLibrary\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Mazii\\Desktop\\Semester 7\\IP\\Learn asp.net\\MvcLibrary\\MvcLibrary\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Mazii\\Desktop\\Semester 7\\IP\\Learn asp.net\\MvcLibrary\\MvcLibrary\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Mazii\\Desktop\\Semester 7\\IP\\Learn asp.net\\MvcLibrary\\MvcLibrary\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\Mazii\\Desktop\\Semester 7\\IP\\Learn asp.net\\MvcLibrary\\MvcLibrary\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Mazii\\Desktop\\Semester 7\\IP\\Learn asp.net\\MvcLibrary\\MvcLibrary\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Mazii\\Desktop\\Semester 7\\IP\\Learn asp.net\\MvcLibrary\\MvcLibrary\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Mazii\\Desktop\\Semester 7\\IP\\Learn asp.net\\MvcLibrary\\MvcLibrary\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\Mazii\\Desktop\\Semester 7\\IP\\Learn asp.net\\MvcLibrary\\MvcLibrary\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Mazii\\Desktop\\Semester 7\\IP\\Learn asp.net\\MvcLibrary\\MvcLibrary\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Mazii\\Desktop\\Semester 7\\IP\\Learn asp.net\\MvcLibrary\\MvcLibrary\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Mazii\\Desktop\\Semester 7\\IP\\Learn asp.net\\MvcLibrary\\MvcLibrary\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\Mazii\\Desktop\\Semester 7\\IP\\Learn asp.net\\MvcLibrary\\MvcLibrary\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Mazii\\Desktop\\Semester 7\\IP\\Learn asp.net\\MvcLibrary\\MvcLibrary\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Mazii\\Desktop\\Semester 7\\IP\\Learn asp.net\\MvcLibrary\\MvcLibrary\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Mazii\\Desktop\\Semester 7\\IP\\Learn asp.net\\MvcLibrary\\MvcLibrary\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\Mazii\\Desktop\\Semester 7\\IP\\Learn asp.net\\MvcLibrary\\MvcLibrary\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Mazii\\Desktop\\Semester 7\\IP\\Learn asp.net\\MvcLibrary\\MvcLibrary\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Mazii\\Desktop\\Semester 7\\IP\\Learn asp.net\\MvcLibrary\\MvcLibrary\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Mazii\\Desktop\\Semester 7\\IP\\Learn asp.net\\MvcLibrary\\MvcLibrary\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\Mazii\\Desktop\\Semester 7\\IP\\Learn asp.net\\MvcLibrary\\MvcLibrary\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Mazii\\Desktop\\Semester 7\\IP\\Learn asp.net\\MvcLibrary\\MvcLibrary\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Mazii\\Desktop\\Semester 7\\IP\\Learn asp.net\\MvcLibrary\\MvcLibrary\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Mazii\\Desktop\\Semester 7\\IP\\Learn asp.net\\MvcLibrary\\MvcLibrary\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\Mazii\\Desktop\\Semester 7\\IP\\Learn asp.net\\MvcLibrary\\MvcLibrary\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Mazii\\Desktop\\Semester 7\\IP\\Learn asp.net\\MvcLibrary\\MvcLibrary\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Mazii\\Desktop\\Semester 7\\IP\\Learn asp.net\\MvcLibrary\\MvcLibrary\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Mazii\\Desktop\\Semester 7\\IP\\Learn asp.net\\MvcLibrary\\MvcLibrary\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\Mazii\\Desktop\\Semester 7\\IP\\Learn asp.net\\MvcLibrary\\MvcLibrary\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Mazii\\Desktop\\Semester 7\\IP\\Learn asp.net\\MvcLibrary\\MvcLibrary\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Mazii\\Desktop\\Semester 7\\IP\\Learn asp.net\\MvcLibrary\\MvcLibrary\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Mazii\\Desktop\\Semester 7\\IP\\Learn asp.net\\MvcLibrary\\MvcLibrary\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\Mazii\\Desktop\\Semester 7\\IP\\Learn asp.net\\MvcLibrary\\MvcLibrary\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\Mazii\\Desktop\\Semester 7\\IP\\Learn asp.net\\MvcLibrary\\MvcLibrary\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Mazii\\Desktop\\Semester 7\\IP\\Learn asp.net\\MvcLibrary\\MvcLibrary\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\Mazii\\Desktop\\Semester 7\\IP\\Learn asp.net\\MvcLibrary\\MvcLibrary\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\Mazii\\Desktop\\Semester 7\\IP\\Learn asp.net\\MvcLibrary\\MvcLibrary\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Mazii\\Desktop\\Semester 7\\IP\\Learn asp.net\\MvcLibrary\\MvcLibrary\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\Mazii\\Desktop\\Semester 7\\IP\\Learn asp.net\\MvcLibrary\\MvcLibrary\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Mazii\\Desktop\\Semester 7\\IP\\Learn asp.net\\MvcLibrary\\MvcLibrary\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\Mazii\\Desktop\\Semester 7\\IP\\Learn asp.net\\MvcLibrary\\MvcLibrary\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\Mazii\\Desktop\\Semester 7\\IP\\Learn asp.net\\MvcLibrary\\MvcLibrary\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Mazii\\Desktop\\Semester 7\\IP\\Learn asp.net\\MvcLibrary\\MvcLibrary\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.MvcLibrary.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.MvcLibrary.props",
+      "PackagePath": "build\\MvcLibrary.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.MvcLibrary.props",
+      "PackagePath": "buildMultiTargeting\\MvcLibrary.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.MvcLibrary.props",
+      "PackagePath": "buildTransitive\\MvcLibrary.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

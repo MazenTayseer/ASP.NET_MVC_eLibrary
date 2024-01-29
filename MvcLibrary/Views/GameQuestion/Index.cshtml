@@ -1,0 +1,77 @@
+@{
+    ViewData["Title"] = "Game Questions Dashboard";
+}
+
+<div class="container my-5 min-vh-100">
+    <section>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card text-center">
+                    <div class="card-header">
+                        <h5 class="card-title">Total Questions</h5>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">@ViewBag.Questions.Count</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mt-5">
+        <div class="row">
+            <div class="col-md-4">
+                <a asp-controller="Admin" asp-action="Index" class="btn btn-lg btn-secondary w-100">Go To Admin Dashboard</a>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="row mt-5">
+            <div class="col-md-12">
+                <br/>
+                <h3>Promo Questions</h3>
+                <div class="card card-body table-responsive">
+                    <table class="table table-striped" id="QuestionsTable">
+                        <thead>
+                        <tr>
+                            <th></th>
+                            <th>ID</th>
+                            <th>Question</th>
+                            <th>Answer</th>
+                            <th>Update</th>
+                            <th>Remove</th>
+                        </tr>
+                        </thead>
+
+                        <tbody>
+                        @foreach (var question in ViewBag.Questions)
+                        {
+                            <tr>
+                                <td>
+                                    <a asp-controller="GameQuestion" asp-action="Details" asp-route-id="@question.GameQuestionId" class="btn btn-sm btn-primary">View</a>
+                                </td>
+                                <td>@question.GameQuestionId</td>
+                                <td>@question.Question</td>
+                                <td>@question.Answer</td>
+                                <td>
+                                    <a asp-controller="GameQuestion" asp-action="Edit" asp-route-id="@question.GameQuestionId" class="btn btn-sm btn-info">Edit</a>
+                                </td>
+                                <td>
+                                    <a asp-controller="GameQuestion" asp-action="Delete" asp-route-id="@question.GameQuestionId" class="btn btn-sm btn-danger">Delete</a>
+                                </td>
+                            </tr>
+                        }
+                        </tbody>
+
+                    </table>
+                    <a
+                        asp-controller="GameQuestion" asp-action="Create"
+                        class="btn btn-primary btn-sm btn-block col-md-12 mt-2">
+                        Add Question
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

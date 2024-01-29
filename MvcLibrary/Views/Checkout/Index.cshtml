@@ -1,0 +1,223 @@
+@model Order
+
+@{
+    ViewData["Title"] = "Checkout";
+}
+
+<div class="container min-vh-100">
+    <div class="text-center d-flex align-items-center justify-content-center">
+        <h2 class="text-center">Checkout</h2>
+        <span style="font-size: 2rem; margin-top: -4px">
+            <i class="fa-solid fa-money-bill mx-2"></i>
+        </span>
+    </div>
+    <hr class="rounded-3" style="border: 2px #b4b2bf solid"/>
+
+    <div class="row g-5">
+        <div class="col-md-5 order-md-last">
+            <h4 class="d-flex justify-content-between align-items-center mb-3">
+                <span class="text-primary">Your cart</span>
+                <span class="badge bg-primary rounded-pill">@ViewData["Cart Total Items"]</span>
+            </h4>
+
+            <ul class="list-group mb-3">
+                @foreach (var item in ViewBag.CartItems)
+                {
+                    <li class="list-group-item d-flex justify-content-between lh-sm">
+                        <div>
+                            <h6 class="my-0">@item.Book.Name</h6>
+                            <small class="text-muted">Quantity: @item.Quantity</small>
+                        </div>
+                        <span class="text-muted">$@item.Book.Price</span>
+                    </li>
+                }
+                @if (ViewBag.PromoIsApplied != null)
+                {
+                    <li class="list-group-item text-success fw-bold">Promo Is Applied</li>
+                }
+                <li class="list-group-item d-flex justify-content-between">
+                    <span>Total (USD)</span>
+                    <strong>$@ViewData["Cart Total Price"]</strong>
+                </li>
+            </ul>
+            
+            <ul class="list-group mt-3" id="errorsContainer">
+                
+            </ul>
+        </div>
+        <div class="col-md-7">
+            <h4 class="mb-3">Your Information</h4>
+            <form method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="row g-3">
+                    <div class="col-sm-6">
+                        <label asp-for="FirstName" class="form-label">First name</label>
+                        <input asp-for="FirstName" id="FirstName" class="form-control" placeholder="First Name"/>
+                        <span asp-validation-for="FirstName" class="text-danger"></span>
+                    </div>
+                    <div class="col-sm-6">
+                        <label asp-for="LastName" class="form-label">Last name</label>
+                        <input asp-for="LastName" id="LastName" class="form-control" placeholder="Last Name"/>
+                        <span asp-validation-for="LastName" class="text-danger"></span>
+                    </div>
+                    <div class="col-12">
+                        <label asp-for="Address" class="form-label">Address</label>
+                        <input asp-for="Address" id="Address" class="form-control" placeholder="Address"/>
+                        <span asp-validation-for="Address" class="text-danger"></span>
+                    </div>
+                    <div class="col-md-5">
+                        <label asp-for="Country" class="form-label">Country</label>
+                        <input asp-for="Country" id="Country" class="form-control" placeholder="Country"/>
+                        <span asp-validation-for="Country" class="text-danger"></span>
+                    </div>
+                    <div class="col-md-4">
+                        <label asp-for="City" class="form-label">City</label>
+                        <input asp-for="City" id="City" class="form-control" placeholder="City"/>
+                        <span asp-validation-for="City" class="text-danger"></span>
+                    </div>
+                    <div class="col-md-3">
+                        <label asp-for="ZipCode" class="form-label">Zip</label>
+                        <input asp-for="ZipCode" id="ZipCode" class="form-control" placeholder="Zip Code"/>
+                        <span asp-validation-for="ZipCode" class="text-danger"></span>
+                    </div>
+                </div>
+                <hr class="my-4"/>
+
+                <button class="w-100 btn btn-primary btn-lg" type="button" id="checkBtnDetails" onclick="checkDetails()">
+                    Check Details
+                </button>
+
+                <div id="paypal-button-container" style="display: none"></div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+
+    <script src="https://www.paypal.com/sdk/js?client-id=AarTi71yM64FtD4k8mc0fMRuFuRebxt2SDJ3Dj8OZaUrEm9K9mhEiMvGgbmzn-ohaf5cHBdP7uLRTUk1&currency=USD&disable-funding=credit"></script>
+
+    <script>
+        // Render the PayPal button into #paypal-button-container
+        const amount = '@ViewData["Cart Total Price"]'
+        
+        paypal.Buttons({
+            style: {
+                color: "gold",
+                shape: "rect",
+                layout: "vertical",
+                height: 40,
+            },
+            // Set up the transaction
+            createOrder: function (data, actions) {
+                return actions.order.create({
+                    purchase_units: [{
+                        amount: {
+                            value: amount
+                        }
+                    }]
+                });
+            },
+            // Finalize the transaction
+            onApprove: function (data, actions) {
+                return actions.order.capture().then(function (details) {
+                    // Send the details to your ASP.NET MVC endpoint
+                    submitOrderToServer(details);
+                });
+            }
+        }).render('#paypal-button-container');
+
+        function submitOrderToServer(details) {
+            var token = $('[name="__RequestVerificationToken"]').val();
+    
+            var orderData = {
+                FirstName: $('#FirstName').val(), // Get the values from the form fields
+                LastName: $('#LastName').val(),
+                Address: $('#Address').val(),
+                Country: $('#Country').val(),
+                City: $('#City').val(),
+                ZipCode: $('#ZipCode').val(),
+                PayPalDetails: JSON.stringify(details) // PayPal transaction details
+            };
+    
+            $.ajax({
+                type: "POST",
+                url: '/Checkout/CreateOrder/',
+                data: JSON.stringify(orderData),
+                contentType: "application/json; charset=utf-8",
+                headers: {
+                    "RequestVerificationToken": token
+                },
+                success: function () {
+                    window.location.href = '@Url.Action("OrderCompleted", "Checkout")';
+                },
+                error: function () {
+                }
+            });
+        }
+        
+    function checkDetails() {
+        const firstName = $('#FirstName').val();
+        const lastName = $('#LastName').val();
+        const address = $('#Address').val();
+        const country = $('#Country').val();
+        const city = $('#City').val();
+        const zipCode = $('#ZipCode').val();
+
+        const orderData = {
+            FirstName: firstName,
+            LastName: lastName,
+            Address: address,
+            Country: country,
+            City: city,
+            ZipCode: zipCode
+        };
+        
+        const checkBtn = $("#checkBtnDetails");
+
+        $.ajax({
+            type: "POST",
+            url: '/Checkout/CheckDetails',
+            data: JSON.stringify(orderData),
+            contentType: "application/json; charset=utf-8",
+            success: function (response) {
+                console.log(response.message)
+                if (response.message === "Success") {
+                    const paypalButton = $("#paypal-button-container");
+                    checkBtn.hide();
+                    paypalButton.show();
+                    
+                    const errorContainer = $("#errorsContainer");
+                    errorContainer.empty();
+                    
+                    $('#FirstName').prop('readonly', true);
+                    $('#LastName').prop('readonly', true);
+                    $('#Address').prop('readonly', true);
+                    $('#Country').prop('readonly', true);
+                    $('#City').prop('readonly', true);
+                    $('#ZipCode').prop('readonly', true);
+                } else {
+                    const paypalButton = $("#paypal-button-container");
+                    paypalButton.hide();
+                    checkBtn.show();
+                    
+                    const errorContainer = $("#errorsContainer");
+                    errorContainer.empty();
+    
+                    if (response.errors && response.errors.length > 0) {
+                        response.errors.forEach(function(error) {
+                            errorContainer.append('<p class="text-danger">' + error + '</p>');
+                        });
+                    }
+                }
+            },
+            error: function () {
+                const paypalButton = $("#paypal-button-container");
+                paypalButton.hide();
+                checkBtn.show();
+            }
+        });
+    }
+    </script>
+}

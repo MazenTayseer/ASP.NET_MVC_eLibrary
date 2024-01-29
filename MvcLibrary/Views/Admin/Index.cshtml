@@ -1,0 +1,99 @@
+@{
+    ViewData["Title"] = "Admin Dashboard";
+}
+
+<div class="container my-5 min-vh-100">
+    <section>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card text-center">
+                    <div class="card-header">
+                        <h5 class="card-title">Total Books</h5>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">@ViewData["TotalBooks"]</h3>
+                    </div>
+                </div>
+            </div>
+            @* <div class="col-md-4"> *@
+            @*     <div class="card text-center"> *@
+            @*         <div class="card-header"> *@
+            @*             <h5 class="card-title">Total Orders</h5> *@
+            @*         </div> *@
+            @*         <div class="card-body"> *@
+            @*             <h3 class="card-title">0</h3> *@
+            @*         </div> *@
+            @*     </div> *@
+            @* </div> *@
+            <div class="col-md-4">
+                <div class="card text-center">
+                    <div class="card-header">
+                        <h5 class="card-title">Total Users</h5>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">@ViewData["TotalUsers"]</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mt-5">
+        <div class="row">
+            <div class="col-md-4">
+                <a asp-controller="GameQuestion" asp-action="Index" class="btn btn-lg btn-secondary w-100">Go To Game Questions</a>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="row mt-3">
+            <div class="col-md-12">
+                <br/>
+                <h3>Products</h3>
+                <div class="card card-body table-responsive">
+                    <table class="table table-striped" id="ProductsTable">
+                        <thead>
+                        <tr>
+                            <th></th>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Stock</th>
+                            <th>Update</th>
+                            <th>Remove</th>
+                        </tr>
+                        </thead>
+
+                        <tbody>
+                        @foreach (var book in ViewBag.Books)
+                        {
+                            <tr>
+                                <td>
+                                    <a asp-controller="Admin" asp-action="ViewBook" asp-route-id="@book.Id" class="btn btn-sm btn-primary">View</a>
+                                </td>
+                                <td>@book.Id</td>
+                                <td>@book.Name</td>
+                                <td>@book.Price</td>
+                                <td>@book.Stock</td>
+                                <td>
+                                    <a asp-controller="Admin" asp-action="EditBook" asp-route-id="@book.Id" class="btn btn-sm btn-info">Edit</a>
+                                </td>
+                                <td>
+                                    <a asp-controller="Admin" asp-action="DeleteBook" asp-route-id="@book.Id" class="btn btn-sm btn-danger">Delete</a>
+                                </td>
+                            </tr>
+                        }
+                        </tbody>
+
+                    </table>
+                    <a
+                        asp-controller="Admin" asp-action="CreateBook"
+                        class="btn btn-primary btn-sm btn-block col-md-12 mt-2">
+                        Add Product
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

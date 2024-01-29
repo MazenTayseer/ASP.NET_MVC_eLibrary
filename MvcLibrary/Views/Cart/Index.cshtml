@@ -1,0 +1,238 @@
+@{
+    ViewData["Title"] = "Cart";
+}
+
+@if (!string.IsNullOrEmpty(ViewBag.ErrorMessage))
+{
+    <div id="alertContainer" class="position-fixed start-50 translate-middle" style="z-index: 9999; display: none;">
+        <div id="alert" class="alert alert-danger alert-dismissible show" role="alert">
+            <span id="alertMessage"></span>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    </div>
+}
+
+<section class="container vh-100">
+    <h2>My Cart <i class="fa-solid fa-cart-shopping"></i></h2>
+    <hr class="rounded-3" style="border: 2px #b4b2bf solid"/>
+
+    <div class="row mt-4">
+        <div class="col-md-8">
+            <table class="table table-striped">
+                <thead class="h4">
+                <th>Name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Add</th>
+                <th>Remove</th>
+                </thead>
+
+                <tbody>
+                @foreach (var item in ViewBag.CartItems)
+                {
+                    <tr class="lead fw-semibold">
+                        <td>@item.Book.Name</td>
+                        <td>$@item.Book.Price</td>
+                        <td id="quantity_@item.Book.Id">@item.Quantity</td>
+                        <th>
+                            <button class="btn btn-primary rounded-3" onclick="adjustQuantity(@item.Book.Id, 'add')">
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+                        </th>
+                        <th>
+                            <button class="btn btn-danger rounded-3" onclick="adjustQuantity(@item.Book.Id, 'remove')">
+                                <i class="fa-solid fa-minus"></i>
+                            </button>
+                        </th>
+                    </tr>
+                }
+                </tbody>
+            </table>
+        </div>
+
+        <div class="col-md-4" id="cart-details">
+            <h4>Cart Details <i class="fa-solid fa-info-circle"></i></h4>
+            <hr class="rounded-3" style="border: 2px #b4b2bf solid"/>
+            <div class="card p-3 mb-4">
+                <h5>Total Cart items: <span id="total_items">@ViewData["Cart Total Items"]</span></h5>
+                <h3 class="mt-2">Total Price : $<span id="total_price">@ViewData["Cart Total Price"]</span></h3>
+
+                @if (!ViewBag.PromoApplied)
+                {
+                    <div class="input-group mt-3">
+                        <input type="text" id="promoCode" class="form-control" placeholder="Enter promo code">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="button" onclick="applyPromo()">Apply</button>
+                        </div>
+                    </div>
+
+                    <p id="wrongPromo" style="display: none" class="text-danger mt-2 fw-bold"></p>
+                }
+                else
+                {
+                    <p class="lead mt-3">Applied Promo Code</p>
+                    <div class="input-group">
+                        <input type="text" id="AppliedPromoCode" class="form-control" value='@ViewData["PromoCode"]' readonly>
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-danger" type="button" onclick="removePromo()">Remove</button>
+                        </div>
+                    </div>
+                }
+
+                <a asp-controller="Checkout" asp-action="Index" class="btn btn-success mt-4">Proceed to checkout</a>
+            </div>
+
+            <h4>Available Promo Codes <i class="fa fa-gift"></i></h4>
+            <hr class="rounded-3" style="border: 2px #b4b2bf solid"/>
+            <div class="card table-responsive p-3">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>Promo Code</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+                    @if (ViewBag.AvailablePromoCodes != null)
+                    {
+                        @foreach (var promo in ViewBag.AvailablePromoCodes)
+                        {
+                            <td>@promo.Code</td>
+                            <td>
+                                <i class="fa fa-copy copy-icon" style="cursor: pointer" onclick="copyToClipboard(this)"></i>
+                            </td>
+                            @if (!promo.Used)
+                            {
+                                <td class="text-center text-success">
+                                    <i class="fa-solid fa-circle-check"></i>
+                                </td>
+                            }
+                            else
+                            {
+                                <td class="text-center text-danger">
+                                    <i class="fa-solid fa-circle-xmark"></i>
+                                </td>
+                            }
+                        }
+                    }
+                    else
+                    {
+                        <td>No Promos Available</td>
+                    }
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+
+
+    </div>
+</section>
+
+@section Scripts
+{
+    <script>
+        var alertMessage = '@ViewBag.ErrorMessage';
+        if (alertMessage.trim() !== '') {
+            $('#alertMessage').text(alertMessage);
+            $('#alertContainer').fadeIn().delay(2000).fadeOut(1000);
+        }
+        
+        function copyToClipboard(element) {
+            const textToCopy = element.parentNode.previousElementSibling.innerText;
+            
+            // Create a temporary textarea element to copy the text
+            const tempTextArea = document.createElement("textarea");
+            tempTextArea.value = textToCopy;
+            document.body.appendChild(tempTextArea);
+            
+            tempTextArea.select();
+            tempTextArea.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(tempTextArea.value);
+            
+            document.body.removeChild(tempTextArea);
+        }
+        
+        function sendMail(){
+            $.ajax({
+                type:"POST",
+                url:"/Order/SendInvoice",
+                data: {},
+                success: function (response) {
+                    console.log(response.message);
+                },
+                error: function (xhr, status, error) {
+                    console.error('Error:', error);
+                }
+            })
+        }
+        
+        function applyPromo(){
+            let promoCode = document.getElementById("promoCode").value;
+            let wrongPromoBox = $("#wrongPromo");
+            $.ajax({
+                type:"POST",
+                url:"/Cart/ApplyPromo/",
+                data:{
+                    promoCode: promoCode
+                },
+                success: function (response) {
+                    if (response.message === "Success"){
+                        window.location.reload();
+                    }
+                    
+                    wrongPromoBox.text("");
+                    setTimeout(()=>{
+                        wrongPromoBox.text(response.reason);
+                        wrongPromoBox.show();
+                    },100)
+                },
+                error: function (xhr, status, error) {
+                    console.error('Error:', error);
+                }
+            })
+        }
+        
+        function removePromo(){
+            $.ajax({
+                type:"POST",
+                url:"/Cart/RemovePromo/",
+                data:{},
+                success: function (response) {
+                    window.location.reload();
+                },
+                error: function (xhr, status, error) {
+                    console.error('Error:', error);
+                }
+            })
+        }
+    
+        function adjustQuantity(bookId, action){
+            $.ajax({
+                type:"POST",
+                url:"/Cart/AdjustQuantity",
+                data: {
+                    bookId: bookId,
+                    action: action
+                },
+                success: function (response) {
+                    if (response.newQuantity === -1){
+                        location.reload();
+                    }
+                    else{
+                        $(`#quantity_${bookId}`).text(response.newQuantity)
+                        $("#total_items").text(response.newTotalItems)
+                        $("#total_price").text(response.newTotalPrice)
+                    }
+                    
+                    // location.reload();
+                },
+                error: function (xhr, status, error) {
+                    console.error('Error:', error);
+                }
+            })
+        }
+    </script>
+}

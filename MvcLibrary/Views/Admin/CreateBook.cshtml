@@ -1,0 +1,63 @@
+@model MvcLibrary.Models.Book
+
+@{
+    ViewData["Title"] = "Add Book";
+}
+
+<div class="container px-4 mt-5 min-vh-100">
+    <div class="row justify-content-center">
+        <div class="col-lg-8 col-xl-6 text-center">
+            <h2 class="mt-0">Add Book</h2>
+            <hr class="divider"/>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <form method="post" enctype="multipart/form-data">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <div class="form-group">
+                    <label asp-for="Name" class="form-label"></label>
+                    <input asp-for="Name" class="form-control" required/>
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mt-4">
+                    <label asp-for="Author" class="form-label"></label>
+                    <input asp-for="Author" class="form-control" required/>
+                    <span asp-validation-for="Author" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mt-4">
+                    <label asp-for="Description" class="form-label"></label>
+                    <textarea asp-for="Description" class="form-control" required rows="6" style="resize: none"></textarea>
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mt-4">
+                    <label asp-for="Price" class="form-label"></label>
+                    <input asp-for="Price" class="form-control" required/>
+                    <span asp-validation-for="Price" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mt-4">
+                    <label asp-for="Stock" class="form-label"></label>
+                    <input asp-for="Stock" class="form-control" required/>
+                    <span asp-validation-for="Stock" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mt-4">
+                    <label asp-for="Image" class="form-label"></label>
+                    <input asp-for="Image" class="form-control" required/>
+                    <span asp-validation-for="Image" class="text-danger"></span>
+                </div>
+
+                <div class="d-grid mt-4">
+                    <button type="submit" class="btn btn-primary btn-xl mb-1">Add Book</button>
+                    <a asp-action="Index" class="btn btn-secondary btn-xl mt-1">Back to List</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

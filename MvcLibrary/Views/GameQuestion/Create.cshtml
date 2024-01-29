@@ -1,0 +1,42 @@
+@model MvcLibrary.Models.GameQuestion
+
+@{
+    ViewData["Title"] = "Add Question";
+}
+
+<div class="container px-4 mt-5 min-vh-100">
+    <div class="row justify-content-center">
+        <div class="col-lg-8 col-xl-6 text-center">
+            <h2 class="mt-0">Add Question</h2>
+            <hr class="divider"/>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <form method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Question" class="form-label"></label>
+                    <textarea asp-for="Question" class="form-control" required rows="6" style="resize: none"></textarea>
+                    <span asp-validation-for="Question" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mt-4">
+                    <label asp-for="Answer" class="form-label"></label>
+                    <input asp-for="Answer" class="form-control" required/>
+                    <span asp-validation-for="Answer" class="text-danger"></span>
+                </div>
+
+                <div class="d-grid mt-4">
+                    <button type="submit" class="btn btn-primary btn-xl mb-1">Add Question</button>
+                    <a asp-action="Index" class="btn btn-secondary btn-xl mt-1">Back to List</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+}

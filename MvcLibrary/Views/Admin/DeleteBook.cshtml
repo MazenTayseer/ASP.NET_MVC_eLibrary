@@ -1,0 +1,28 @@
+@model Book
+
+@{
+    ViewData["Title"] = "DeleteBook";
+}
+
+<div class="container mt-5 vh-100">
+  <h1>Delete Book</h1>
+
+  <div class="card">
+    <div class="card-body">
+      <h3>Are you sure you want to delete this?</h3>
+
+      <!-- Display Book Details -->
+      <div class="book-info mb-3 flex flex-column">
+        <p><strong>Book Name:</strong> @Model.Name</p>
+        <p><strong>Price:</strong> @Model.Price</p>
+        <p><strong>Stock:</strong> @Model.Stock</p>
+      </div>
+      
+      <form asp-action="DeleteBook" method="post">
+        <input type="hidden" asp-for="Id" />
+        <button type="submit" class="btn btn-danger me-1">Delete Book</button>
+        <a asp-action="Index" class="btn btn-secondary ms-1">Back to List</a>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,212 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@if (!string.IsNullOrEmpty(ViewBag.ErrorMessage))
+{
+    <div id="alertContainer" class="position-fixed start-50 translate-middle" style="z-index: 9999; display: none;">
+        <div id="alert" class="alert alert-danger alert-dismissible show" role="alert">
+            <span id="alertMessage"></span>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    </div>
+}
+
+<section class="py-5 text-sm-start vh-100">
+    <div class="container">
+        <div class="d-sm-flex align-items-center justify-content-between hero">
+            <div>
+                <h1 style="font-size: 5rem">
+                    The <span class="text-primary fw-bold">E-Biblioteca</span><br/>
+                    eBook Library
+                </h1>
+                <p class="lead my-4">
+                    Discover captivating e-books for stories that transport you
+                    anytime, anywhere. Immerse yourself in diverse narratives with the
+                    convenience of digital reading at your fingertips.
+                </p>
+            </div>
+            <img
+                class="w-50 d-none d-md-block"
+                src="~/imgs/main.jpg"
+                alt=""/>
+        </div>
+    </div>
+</section>
+
+<div
+    class="px-4 py-5 bg-dark text-light align-items-center">
+    <h5 class="text-center">
+        What E-Biblioteca offers <i class="fa-solid fa-book"></i>
+    </h5>
+
+    <div
+        class="row g-4 py-5 row-cols-1 row-cols-lg-3"
+        style="margin-left: 40px">
+        <div class="col d-flex align-items-start;">
+            <div class="text-light flex-shrink-0 me-3">
+                <i
+                    class="fa-solid fa-computer"
+                    style="margin-top: 15px; height: 20px; width: 20px">
+                </i>
+            </div>
+            <div>
+                <h2>Digital connections</h2>
+                <p>
+                    Access to a wide range of digital books in various formats. Online
+                    access to academic and professional journals. Inclusion of audio,
+                    video, and interactive content
+                </p>
+            </div>
+        </div>
+        <div class="col d-flex align-items-start">
+            <div class="icon-square text-light flex-shrink-0 me-3">
+                <i
+                    class="fa-solid fa-magnifying-glass"
+                    style="margin-top: 15px; height: 20px; width: 20px">
+                </i>
+            </div>
+            <div>
+                <h2>Search and Navigation</h2>
+                <p class>
+                    Advanced search functionalities: Users can search by keywords,
+                    authors, titles, and other criteria. .
+                </p>
+            </div>
+        </div>
+        <div class="col d-flex align-items-start">
+            <div
+                class="icon-square text-light flex-shrink-0 me-3"
+                style="margin-top: 7px; height: 20px; width: 20px">
+                <i class="fa-solid fa-user"></i>
+            </div>
+            <div>
+                <h2>User Authentication and Authorization</h2>
+                <p>
+                    Secure login: Users may need to authenticate themselves to access
+                    certain resources.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="py-5 text-sm-start">
+    <div class="container">
+        <div class="d-sm-flex align-items-center justify-content-between hero">
+            <h1 style="font-size: 2rem">
+                Purchase <span class="fw-bold" style="color: #a87ff9">Books</span>
+                with the click of a button.
+            </h1>
+
+            <img
+                class="w-50 d-none d-md-block"
+                src="~/imgs/index 1.jpg"
+                alt=""/>
+        </div>
+    </div>
+</section>
+
+<section class="py-5 text-sm-start">
+    <div class="container">
+        <div class="d-sm-flex align-items-center justify-content-between hero">
+            <img
+                class="w-50 d-none d-md-block"
+                src="~/imgs/index 2.jpg"
+                alt=""/>
+            <h1 style="font-size: 2rem">
+                Keep <span class="fw-bold" style="color: #fc6d45">Track</span>
+                of all your readings.
+            </h1>
+        </div>
+    </div>
+</section>
+
+<div
+    class="px-4 py-5 bg-dark text-light align-items-center">
+    <h1 class="text-center">
+        All in One Safe Space <i class="fa-solid fa-lock"></i>
+    </h1>
+</div>
+
+<h2 class="text-center mt-5">
+    Our <span class="fw-bold" style="color: #0d6efd">All</span> Time Top
+    Listings.
+</h2>
+
+<section class="py-5 text-sm-start">
+    <div class="container">
+        <div class="d-sm-flex align-items-center justify-content-between hero">
+            <div>
+                <h1 style="font-size: 4rem">48 Laws of Power</h1>
+                <p class="lead my-4 me-4">
+                    "The 48 Laws of Power" by Robert Greene is a concise guide
+                    outlining strategic principles for acquiring and wielding
+                    influence in various aspects of life, drawing from historical
+                    examples and psychological insights.
+                </p>
+                <a asp-controller="Library" asp-action="Index">
+                    <button class="btn btn-lg btn-primary">View Library</button>
+                </a>
+            </div>
+
+            <img
+                class="d-none d-md-block w-25"
+                src="~/imgs/index books/48 Laws of Power.png"
+                alt=""/>
+        </div>
+    </div>
+</section>
+
+<section class="py-5 text-sm-start">
+    <div class="container">
+        <div class="d-sm-flex align-items-center justify-content-between hero">
+            <div>
+                <h1 style="font-size: 4rem">Atomic Habits</h1>
+                <p class="lead my-4 me-4">
+                    "Atomic Habits" by James Clear is a transformative guide that explores the power of small, incremental changes to build good habits and break bad ones. Clear emphasizes the impact of tiny habits, illustrating how consistent, positive actions lead to significant personal and professional growth over time.
+                </p>
+                <a asp-controller="Library" asp-action="Index">
+                    <button class="btn btn-lg btn-primary">View Library</button>
+                </a>
+            </div>
+
+            <img
+                class="d-none d-md-block w-25"
+                src="~/imgs/index books/Atomic Habits.png"
+                alt=""/>
+        </div>
+    </div>
+</section>
+
+<section class="py-5 text-sm-start">
+    <div class="container">
+        <div class="d-sm-flex align-items-center justify-content-between hero">
+            <div>
+                <h1 style="font-size: 4rem">To Kill A Mocking Bird.</h1>
+                <p class="lead my-4 me-4">
+                    "To Kill a Mockingbird" follows Scout Finch in the racially tense 1930s South, where her father, Atticus Finch, defends a wrongly accused black man. The novel explores themes of racism, morality, and justice through the eyes of Scout and her brother Jem.
+                </p>
+                <a asp-controller="Library" asp-action="Index">
+                    <button class="btn btn-lg btn-primary">View Library</button>
+                </a>
+            </div>
+
+            <img
+                class="d-none d-md-block w-25"
+                src="~/imgs/index books/To Kill A Mockingbird.jpg"
+                alt=""/>
+        </div>
+    </div>
+</section>
+
+@section Scripts
+{
+    <script>
+            var alertMessage = '@ViewBag.ErrorMessage';
+            if (alertMessage.trim() !== '') {
+                $('#alertMessage').text(alertMessage);
+                $('#alertContainer').fadeIn().delay(2000).fadeOut(1000);
+            }
+    </script>
+}

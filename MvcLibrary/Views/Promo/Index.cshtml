@@ -1,0 +1,77 @@
+@{
+    ViewData["Title"] = "Book Trivia";
+}
+
+<div class="container vh-100 d-flex justify-content-center align-items-center">
+    <div class="trivia">
+        <form id="triviaForm" class="row g-3" method="get">
+            <img src="~/imgs/promo.jpg"
+                 class="mx-auto d-block"
+                 style="height: 150px; width: 150px;"
+                 alt="trivia"/>
+            <div class="col-12">
+                <div class="trivia-title-div">
+                    <span class="form-label trivia-title">Book Trivia</span>
+                </div>
+
+                <span class="trivia-question">
+                    @ViewBag.Question
+                </span>
+
+                <div class="trivia-input-div">
+                    <input type="text" id="answer" name="answer" class="form-control" placeholder="Answer (e.g. Harry Potter)"/>
+                    <input type="hidden" id="questionId" name="questionId" value="@ViewData["QuestionId"]"/>
+                </div>
+
+                <div class="trivia-btn">
+                    <input type="submit" id="submitBtn" class="btn btn-warning" value="Submit"/>
+                </div>
+
+                <div class="mt-2 trivia-response">
+                    <span id="showAnswer"></span>
+                </div>
+
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts
+{
+    <script>
+        console.log("@ViewData["Answer"]")
+    
+        $('#triviaForm').submit(function(e) {
+            e.preventDefault();
+            const questionId = document.getElementById("questionId").value;
+            const answer = document.getElementById("answer").value;
+            
+            $.ajax({
+                type: 'GET',
+                url: "/Promo/Answer/",
+                data: {
+                    questionId: questionId,
+                    answer: answer
+                },
+                success: function(response) {
+                    // Clear previous messages
+                    $('#showAnswer').text("");
+                    
+                    setTimeout(()=>{
+                        if (response.message === "Correct"){
+                            $('#answer').prop('disabled', true);
+                            $('#submitBtn').prop('disabled', true);
+                            $('#showAnswer').text("Correct! Your Promo is " + response.promo);
+                        }
+                        else{
+                            $('#showAnswer').text("Incorrect, Try again!");
+                        }
+                    }, 100)
+                },
+                error: function(xhr, status, error) {
+                    console.error(error);
+                }
+            });
+        });
+    </script>
+}

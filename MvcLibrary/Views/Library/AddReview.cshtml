@@ -1,0 +1,68 @@
+@model MvcLibrary.Models.Review
+
+@{
+    ViewData["Title"] = "title";
+}
+
+<div class="container px-4 mt-5 vh-100">
+    <div class="row justify-content-center">
+        <div class="col-lg-8 col-xl-6 text-center">
+            <h2 class="mt-0">Add Rating For @ViewData["BookName"]</h2>
+            <hr class="divider"/>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <form method="post" enctype="multipart/form-data">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <div class="form-group">
+                    <label asp-for="Rating" class="form-label">Rating:</label>
+                    <div class="rating">
+                        <input type="hidden" asp-for="Rating" class="form-control" required/>
+                        <span class="fa fa-star fa-lg" data-value="1"></span>
+                        <span class="fa fa-star fa-lg" data-value="2"></span>
+                        <span class="fa fa-star fa-lg" data-value="3"></span>
+                        <span class="fa fa-star fa-lg" data-value="4"></span>
+                        <span class="fa fa-star fa-lg" data-value="5"></span>
+                    </div>
+                    <span asp-validation-for="Rating" class="text-danger"></span>
+                </div>
+
+
+                <div class="form-group mt-4">
+                    <label asp-for="Comment" class="form-label"></label>
+                    <textarea asp-for="Comment" class="form-control" rows="6" style="resize: none"></textarea>
+                    <span asp-validation-for="Comment" class="text-danger"></span>
+                </div>
+
+                <div class="d-grid mt-4">
+                    <button type="submit" class="btn btn-primary btn-xl mb-1">Add Rating</button>
+                    <a asp-action="Index" class="btn btn-secondary btn-xl mt-1">Back to Library</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts
+{
+    <script>
+    const stars = document.querySelectorAll('.fa-star');
+
+    stars.forEach(star => {
+        star.addEventListener('click', function () {
+            const value = this.getAttribute('data-value');
+            const ratingInput = document.querySelector('input[name="Rating"]');
+            ratingInput.value = value;
+
+            // Highlight selected stars (optional)
+            stars.forEach(s => s.classList.remove('text-warning'));
+            for (let i = 0; i < value; i++) {
+                stars[i].classList.add('text-warning');
+            }
+        });
+    });
+    </script>
+}

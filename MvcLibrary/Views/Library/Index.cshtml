@@ -1,0 +1,164 @@
+@{
+    ViewData["Title"] = "Library";
+}
+
+<div id="alertContainer" class="position-fixed start-50 translate-middle" style="z-index: 9999;">
+    <div id="alert" class="alert alert-primary alert-dismissible show" role="alert" style="display: none">
+        <span id="alertMessage"></span>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+</div>
+
+@if (!string.IsNullOrEmpty(ViewBag.ErrorMessage))
+{
+    <div id="ratingContainer" class="position-fixed start-50 translate-middle" style="z-index: 9999; display: none;">
+        <div id="rating" class="alert alert-danger alert-dismissible show" role="alert">
+            <span id="ratingMessage"></span>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    </div>
+}
+
+<section class="py-5 min-vh-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <h4>Recommended</h4>
+                <hr class="rounded-3" style="border: 2px #b4b2bf solid"/>
+                <div class="row">
+                    @foreach (var book in ViewBag.RecommendedBooks)
+                    {
+                        <div class="col-md-3">
+                            <div class="card h-100 shadow">
+                                <img src="@book.ImageUrl" class="card-img-top img-fluid" alt="@book.Name" style="height: 300px;">
+                                <div class="card-body">
+                                    @* <h5 class="card-title"> *@
+                                    @*     <span class="badge bg-secondary">Fiction</span> *@
+                                    @* </h5> *@
+                                    <p class="card-text lead">@book.Name</p>
+                                    <p class="card-text fw-bold">@book.Author</p>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <h4>Pick for today</h4>
+                <hr class="rounded-3" style="border: 2px #b4b2bf solid"/>
+                <div class="card shadow shadow-md">
+                    <img
+                        src="@ViewBag.PickForToday.ImageUrl"
+                        class="card-img"
+                        alt="Atomic Habits"
+                        style="max-height: 27rem"/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h4 class="mt-5">All Books</h4>
+        <hr class="rounded-3" style="border: 2px #b4b2bf solid"/>
+
+        <table id="libraryTable" class="table table-striped">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th style="width: 50%">Book Name</th>
+                <th>Book Price</th>
+                <th>Rating</th>
+                <th style="width: 15%">Book Cover</th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach (var book in ViewBag.Books)
+            {
+                <tr>
+                    <td>@book.Id</td>
+                    <td data-order="@book.Name">
+                        <div class="d-flex align-items-baseline gap-2">
+                            <h2>@book.Name</h2>
+                            <p class="m-0">
+                                @if (book.Stock > 0)
+                                {
+                                    <i class="fa-solid fa-circle-check text-success"></i>
+                                    <span class="text-success small">Available</span>
+                                }
+                                else
+                                {
+                                    <i class="fa-solid fa-circle-xmark text-danger"></i>
+                                    <span class="text-danger small">Out of Stock</span>
+                                }
+                            </p>
+                        </div>
+                        <p class="lead my-2">
+                            @book.Description
+                        </p>
+                        <div class="d-flex flex-column gap-2 align-items-baseline">
+                            @if (book.Stock > 0)
+                            {
+                                <button class="btn btn-primary" onclick="addToCart(this, @book.Id)">Add to Cart</button>
+                            }
+                            else
+                            {
+                                <button class="btn btn-danger" onclick="addToCart(this, @book.Id)">Out of stock</button>
+                            }
+                            <a asp-controller="Library" asp-action="AddReview" asp-route-id="@book.Id" class="btn btn-sm btn-secondary">Add Rating</a>
+                        </div>
+
+                    </td>
+                    <td class="lead fw-bold" data-order="@book.Price">$@book.Price</td>
+                    <td class="lead fw-bold">@book.CumulativeRating</td>
+                    <td cl>
+                        <img
+                            src="@book.ImageUrl"
+                            class="img-fluid"
+                            alt="@book.Name"/>
+                    </td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+</section>
+
+@section Scripts
+{
+    <script>
+        var alertMessage = '@ViewBag.ErrorMessage';
+        if (alertMessage.trim() !== '') {
+            $('#ratingMessage').text(alertMessage);
+            $('#ratingContainer').fadeIn().delay(2000).fadeOut(1000);
+        }
+    
+      function addToCart(currentBtn, bookId) {
+              $.ajax({
+                  type: "POST",
+                  url: '/Library/AddToCart',
+                  data: { bookId: bookId },
+                  success: function (response) {
+                      if (response.success) {
+                          $('#alertMessage').text(response.message);
+                          $('#alert').fadeIn();
+      
+                          currentBtn.disabled = true;
+                          currentBtn.innerHTML = '<i class="fa-solid fa-check"></i>';
+      
+                          setTimeout(function () {
+                              $('#alert').fadeOut();
+                              currentBtn.disabled = false;
+                              currentBtn.innerHTML = 'Add to Cart';
+                          }, 1200);
+                      } else {
+                          alert(response.message); // Display an alert or handle the out-of-stock case
+                      }
+                  },
+                  error: function (xhr, status, error) {
+                      window.location.href = "/Identity/Account/Login"
+                  }
+              });
+          }
+    </script>
+}
